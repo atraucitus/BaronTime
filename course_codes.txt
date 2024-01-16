@@ -11,3 +11,10 @@ CSET335: Deep Learning
 CSET370: Data Visualisation and Dashboards
 CSET483: Career Skills for IT Companies
 CSET389: LAMP
+
+# CSE 1st Year, 2 sem
+EMAT102L: Linear Algebra And Ordinary Differential Equations
+CSET106: Discrete Mathematical Structures
+CSET109: Object Oriented rogramming Using Java
+EPHY111L: Electromagnetism And Mechanics
+CSET105: Digital Design
