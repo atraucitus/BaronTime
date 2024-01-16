@@ -1,0 +1,13 @@
+# BaronTime
+# Extend the list as you wish.
+# Lines Starting with # will be ignored
+
+
+# CSE 3rd 6th Sem
+CSET306: Undergraduate Research in CSE
+CSET108: Environment and Sustainability
+CSET309: Organizational Behaviour
+CSET335: Deep Learning
+CSET370: Data Visualisation and Dashboards
+CSET483: Career Skills for IT Companies
+CSET389: LAMP
