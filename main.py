@@ -1,5 +1,6 @@
 import openpyxl as xl
 from tkinter import filedialog
+import re
 
 
 class TimeTable():
@@ -34,46 +35,74 @@ class TimeTable():
         
         clist = []
         for c in tlist:
-            if c[0] != '#':
+            if c[0] != '#' and c != '\n':
                 clist.append(c.rstrip('\n'))
 
         self.clist = clist
+        # print(self.clist)
 
 
-        def isValid(ele):
-            return any(lambda c: c in ele, self.clist)
+        def isValidCourse(ele):
+            """Inner Function verifies if course valid"""
+            return any(map(lambda c: c in ele, self.clist))
 
 
         self.rows_updated = []
         for row in self.rows:
             nrow = []
             for cell in row:
-                ncell = filter(isValid, cell)
+                ncell = list(filter(isValidCourse, cell))
                 nrow.append(ncell)
             self.rows_updated.append(nrow)
 
-    def compile(self):
+    def convertToCalendarEvents(self):
         timings = [
-            ('8:30-9:25'),
-            ('9:30-10:25'),
-            ('10:40-11:35'),
-            ('11:40-12:35'),
-            ('12:40-1:30'),
-            ('13:30-14:25'),
-            ('14:30-15:25'),
-            ('15:40-16:35'),
-            ('16:40-17:35'),
-            ('17:40-18:35')
+            '8:30-9:25',
+            '9:30-10:25',
+            '10:40-11:35',
+            '11:40-12:35',
+            '12:40-1:30',
+            '13:30-14:25',
+            '14:30-15:25',
+            '15:40-16:35',
+            '16:40-17:35',
+            '17:40-18:35'
         ]
+        timings = [timing.split('-') for timing in timings]
 
-        days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-        
 
-        self.removeOtherCourses()
+        days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']     # Not used.
+        dates = ['15/01/2024', '16/01/2024', '17/01/2024', '18/01/2024', '19/01/2024', '20/01/2024']    # Calendar starts from Monday 15th Jan 2024
+
+        def getCourse(row, col):
+            class_ele = "\n".join(self.rows_updated[i][j])      # Incase there are multiple courses (cuz Ben10 👍)
+            if not class_ele:
+                return
+            
+            room = re.search('{(.*?)}', class_ele)[0]
+            
+            class_ele = class_ele.replace(room, "")
+            class_ele = class_ele.strip(': ')
+
+            startt, endt = timings[row]
+            date = dates[col]
+
+            return date, startt, endt, class_ele, room
+
+
+        self.calendar_events = []
         si, sj = len(self.rows_updated), len(self.rows_updated[0])
         for i in range(si):
             for j in range(sj):
-                print(i, j, "".join(self.rows_updated[i][j]))
+                course = getCourse(i, j)
+                if course:
+                    self.calendar_events.append(course)
+
+    def compile(self):
+        self.removeOtherCourses()
+        self.convertToCalendarEvents()
+
+                 
 
 
 
