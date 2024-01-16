@@ -38,7 +38,7 @@ class TimeTable():
         clist = []
         for c in tlist:
             if c[0] != '#' and c != '\n':
-                clist.append(c.rstrip('\n'))
+                clist.append(c.rstrip('\n').strip())
 
         self.clist = clist
         # print(self.clist)
