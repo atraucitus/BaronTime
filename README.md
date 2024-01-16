@@ -23,7 +23,7 @@ Open the ```.xls``` file excel and save as ```.xlsx```
 Generate your course registration slip from [CollPoll](https://bennett.digiicampus.com/courseRegistration/student).
 
 Slip looks like this
-![Course Registration](image.png)
+![Course Registration](courseRegistration.png)
 
 Open Dev Tools and run the following code in the console window.
 ```JS
@@ -39,7 +39,7 @@ console.log(f)
 
 ## Add your .ics file to Office365 calendar.
 - Create a new blank calendar.
-![New Blank Calendar](image-1.png)
+![New Blank Calendar](createCalendar.png)
 - Click on **Upload from file** and upload the ```.ics``` file.
 - Add it to the newly created blank calendar.
 - Done. 
