@@ -38,7 +38,7 @@ class TimeTable():
         clist = []
         for c in tlist:
             if c[0] != '#' and c != '\n':
-                clist.append(c.rstrip('\n'))
+                clist.append(c.rstrip('\n').strip())
 
         self.clist = clist
         # print(self.clist)
@@ -162,8 +162,8 @@ END:VTIMEZONE
                 ics_events += f"SUMMARY:{class_desc}\n"
                 ics_events += f"DTSTAMP:20002208T000000\n"
                 ics_events += f"DESCRIPTION:Class Time!\n"
-                ics_events += f"DTSTART:{dt.strftime(startt, "%Y%m%dT%H%M%S")}\n"
-                ics_events += f"DTEND:{dt.strftime(endt, "%Y%m%dT%H%M%S")}\n"
+                ics_events += f"DTSTART:{dt.strftime(startt, '%Y%m%dT%H%M%S")}\n'
+                ics_events += f"DTEND:{dt.strftime(endt, '%Y%m%dT%H%M%S")}\n'
                 ics_events += f"LOCATION:{room}\n"
                 ics_events += f"UID:{str(week).zfill(2)}{str(random.randint(0, 100)).zfill(2)}{day}{course_code}\n"
                 ics_events += "END:VEVENT\n\n"
