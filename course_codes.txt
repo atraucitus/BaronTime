@@ -12,6 +12,7 @@ CSET370: Data Visualisation and Dashboards
 CSET483: Career Skills for IT Companies
 CSET389: LAMP
 CSET488: Growth Hacking
+CSET344: Image Processing
 
 # CSE 1st Year, 2 sem
 EMAT102L: Linear Algebra And Ordinary Differential Equations
