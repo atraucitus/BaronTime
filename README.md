@@ -15,7 +15,7 @@
 7. Add the file to your calendar. [How to add calendar to Office 365.](#add-your-ics-file-to-office365-calendar)
 
 ## Fix .xls excel sheet
-Open the ```.xls``` file excel and save as ```.xlsx```
+Open the ```.xls``` file excel and save as ```.xlsx``` (Excel Workbook)
 
 ## Get your course codes
 **Known Issue: Does not work for all as different layout throughout years. Dumb**
