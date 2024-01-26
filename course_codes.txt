@@ -14,6 +14,13 @@ CSET389: LAMP
 CSET488: Growth Hacking
 CSET344: Image Processing
 
+# CSE 2nd 4th Sem
+CSET301: AI/ML
+CSET207: Computer Networks
+CSET210: DTI
+CSET206: DSA
+CSET209: Operating Systems
+
 # CSE 1st Year, 2 sem
 EMAT102L: Linear Algebra And Ordinary Differential Equations
 CSET106: Discrete Mathematical Structures
