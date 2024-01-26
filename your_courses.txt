@@ -2,10 +2,8 @@
 # Add your courses in a list here.
 # Lines starting with # will be ignored.
 
-CSET306
-CSET108
-CSET309
-CSET335
-CSET370
-CSET483
-CSET389
+CSET301
+CSET207
+CSET210
+CSET206
+CSET209
